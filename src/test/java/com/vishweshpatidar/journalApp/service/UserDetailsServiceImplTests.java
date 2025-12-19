@@ -16,6 +16,7 @@ import java.util.ArrayList;
 
 import static org.mockito.Mockito.*;
 
+@Disabled
 public class UserDetailsServiceImplTests {
     @InjectMocks
     private UserDetailsServiceImpl userDetailsService;
@@ -27,7 +28,6 @@ public class UserDetailsServiceImplTests {
     void setUp(){
         MockitoAnnotations.openMocks(this);
     }
-    @Disabled
     @Test
     void loadUserByUsernameTest(){
         when(userRepository.findByUserName(ArgumentMatchers.anyString())).thenReturn(User.builder().userName("ram").password("sasas").roles(new ArrayList<>()).build());

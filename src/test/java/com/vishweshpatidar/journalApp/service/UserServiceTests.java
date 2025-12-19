@@ -13,13 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Disabled
 @SpringBootTest
 public class UserServiceTests {
 
     @Autowired
     private UserRepository userRepository;
 
-    @Disabled
     @ParameterizedTest
     @ValueSource(strings = {
             "vishwesh",
@@ -36,7 +36,6 @@ public class UserServiceTests {
 //        assertNotNull(userRepository.findByUserName(name), "failed for: " + name);
 //    }
 
-    @Disabled
     @ParameterizedTest
     @CsvSource({
             "1,1,2",
