@@ -3,8 +3,7 @@ on:
   push:
     branches:
       - master
-  pull_request:
-    types: [opened, synchronize, reopened]
+  pull_req    types: [opened, synchronize, reopened]
 jobs:
   build:
     name: Build and analyze
@@ -34,3 +33,4 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=vishweshpatidar_journalapp
+
